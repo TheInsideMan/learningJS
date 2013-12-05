@@ -1,3 +1,17 @@
+function sphere(){
+	'use strict';
+	var volume;
+	var radius = document.getElementById('radius').value;
+	//get the absolute value
+	radius = Math.abs(radius);
+
+	volume = (4/3) * Math.PI * Math.pow(radius,3);
+	volume = volume.toFixed(4);
+	document.getElementById('volume').value = volume;
+	return false;
+}
+
+
 function calculate(){
 	
 	'use strict';
@@ -24,8 +38,10 @@ function calculate(){
 
 function init (){
 	'use strict';
+	var theSphereForm = document.getElementById('theSphereForm');
 	var theForm = document.getElementById('theForm');
 	theForm.onsubmit = calculate;
+	theSphereForm.onsubmit = sphere;
 }
 	
 window.onload = init;		
