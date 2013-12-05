@@ -1,3 +1,17 @@
+function limitText(){
+	'user strict';
+	var limitedText;
+	var origionalText = document.getElementById('comments').value;
+
+	var lastSpace = origionalText.lastIndexOf(' ',100);
+	limitedText = origionalText.slice(0,lastSpace);
+	document.getElementById('count').value = origionalText.length;
+	document.getElementById('result').value = limitedText;
+	return false;
+}
+
+
+
 function sphere(){
 	'use strict';
 	var volume;
@@ -13,7 +27,6 @@ function sphere(){
 
 
 function calculate(){
-	
 	'use strict';
 	var total;
 	var quantity = document.getElementById('quantity').value;
@@ -30,18 +43,17 @@ function calculate(){
 	total = total.toFixed(2);
 	document.getElementById('total').value = total;
 	return false;
-	
-	
-
-	
 }//end of function
+
 
 function init (){
 	'use strict';
 	var theSphereForm = document.getElementById('theSphereForm');
+	var theSliceForm = document.getElementById('theSliceForm');
 	var theForm = document.getElementById('theForm');
 	theForm.onsubmit = calculate;
 	theSphereForm.onsubmit = sphere;
+	theSliceForm.onsubmit = limitText;
 }
 	
 window.onload = init;		

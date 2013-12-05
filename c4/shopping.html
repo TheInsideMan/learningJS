@@ -19,12 +19,26 @@
 		<div><label for="total">Total</label><input type="text" name="total" id="total" value="0.00" required></div>
 		<div><input type="submit" value="calculate" id="submit"></div>
 		</form>
+
+
+
 		<h3>Calculate volume of a sphere</h3>
 		<form action="index.php" method="post" id="theSphereForm">
 		<div><label for="radius">Radius</label><input type="text" name="radius" id="radius"  required></div>
 		<div><label for="volume">Volume</label><input type="text" name="volume" id="volume" ></div>
 		<div><input type="submit" value="calculate" id="submit"></div>
 		</form>
+
+		<h3>Slice() demo</h3>
+		<form action="index.php" method="post" id="theSliceForm">
+		<div><label for="comments">Comments</label><textarea name="comments" id="comments" maxlength="100" required> </textarea></div>
+		<div><label for="count">Character Count</label><input type="number" name="count" id="count" ></div>
+		<div><label for="result">Result</label><textarea name="result" id="result" maxlength="100" required> </textarea> </div>
+		<div><input type="submit" value="calculate" id="submit"></div>
+		</form>
+
+
+
 		<script src="js/shopping.js"></script>
 	</body>
 </html>
