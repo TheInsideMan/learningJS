@@ -12,7 +12,8 @@ function calculate(){
 	tax++;
 	total *= tax;
 	total -= discount;
-	
+	// set the decimal point to 2 places
+	total = total.toFixed(2);
 	document.getElementById('total').value = total;
 	return false;
 	
